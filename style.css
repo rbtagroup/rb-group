@@ -173,3 +173,31 @@ button {
     color: black !important;
   }
 }
+
+
+/* Béžové pozadí */
+body {
+  background-color: #fdf6e3 !important;
+  color: #333;
+}
+
+/* Mobilní přizpůsobení */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  .container {
+    width: 100% !important;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  input, select, button {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
