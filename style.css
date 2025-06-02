@@ -1,0 +1,175 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #fff8e1;
+  color: #333;
+  padding: 1rem;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #d4af37;
+  margin-bottom: 1rem;
+}
+
+.container {
+  max-width: 480px;
+  margin: auto;
+}
+
+form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #d4af37;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #c9a032;
+}
+
+.output-box {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  margin-bottom: 1.5rem;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.button-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+section.hidden {
+  display: none;
+}
+
+section.active {
+  display: block;
+}
+
+/* Mobilní optimalizace */
+@media (max-width: 480px) {
+  .button-row {
+    flex-direction: column;
+  }
+}
+
+
+/* Zvýraznění aktivního pole */
+input:focus, select:focus {
+  border-color: #ffcc00;
+  box-shadow: 0 0 4px #ffcc00;
+  outline: none;
+}
+
+/* Základní typografie */
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: system-ui, sans-serif;
+  color: #111;
+}
+
+/* Větší tlačítka */
+button {
+  font-size: 16px;
+  padding: 12px 20px;
+  min-height: 44px;
+  cursor: pointer;
+}
+
+/* Výrazné barevné bloky */
+.alert {
+  background-color: #ffe6e6;
+  border-left: 6px solid #ff0000;
+  color: #cc0000;
+  padding: 12px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.green {
+  color: #007700;
+}
+
+.highlight {
+  color: #0000cc;
+  font-weight: bold;
+}
+
+/* Dark mode podpora */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #ffffff;
+  }
+
+  input, select {
+    background-color: #1e1e1e;
+    color: #fff;
+    border-color: #444;
+  }
+
+  button {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+  }
+
+  .alert {
+    background-color: #330000;
+    color: #ff6666;
+    border-left: 4px solid #ff3333;
+  }
+
+  .green {
+    color: #66ff66;
+  }
+
+  .highlight {
+    color: #66ccff;
+  }
+}
+
+/* Tisk: skryjeme prvky, které nemají být v PDF */
+@media print {
+  button, .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}

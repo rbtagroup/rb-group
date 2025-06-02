@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+<head>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RB TAXI – Výčetka</title>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="vysledek.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body class="gold-theme" class="gold-theme">
+<main class="output-page" id="resultContainer">
+<h1>📄 Výčetka řidiče</h1>
+<div class="result-box" id="resultContent">
+<!-- Výsledek výpočtu se načte zde -->
+</div>
+<div class="actions">
+<button onclick="window.print()">📄 Export do PDF</button>
+<button onclick="share()">📤 Sdílet</button>
+<button onclick="goBack()">🔁 Nová směna</button>
+</div>
+</main>
+<button onclick="window.print()" style="margin-top: 2rem;">🖨 Tisk výčetky</button>
+</body>
+</html>

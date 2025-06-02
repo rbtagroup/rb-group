@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RB TAXI – Výčetka</title>
+<link href="manifest.json" rel="manifest"/>
+<link href="style.css" rel="stylesheet"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon">
+<meta content="#FFD700" name="theme-color"/>
+</link></head>
+<body class="gold-theme">
+<main class="container">
+<!-- FORM PAGE -->
+<section class="active" id="form-section">
+<h1><i class="material-icons" style="vertical-align: middle;">description</i> RB TAXI – Výčetka</h1>
+<form id="taxiForm">
+<label for="driverName">👤  Řidič:</label>
+<input id="driverName" required="" type="text"/>
+<label for="trzba">💰  Celková tržba (Kč):</label>
+<input id="trzba" required="" type="number"/>
+<label for="km">📏  Najeté km:</label>
+<input id="km" required="" type="number"/>
+<label for="palivo">⛽  Palivo (Kč):</label>
+<input id="palivo" type="number"/>
+<label for="myti">🧼  Mytí (Kč):</label>
+<input id="myti" type="number"/>
+<label for="kartou">💳  Kartou (Kč):</label>
+<input id="kartou" type="number"/>
+<label for="fakturou">🧾  Fakturou (Kč):</label>
+<input id="fakturou" type="number"/>
+<label for="pristavne">🚕  Přístavné (Kč):</label>
+<input id="pristavne" type="number"/>
+
+<label for="jine">💸 Jiné platby (Kč):</label>
+<input id="jine" type="number"/>
+<label for="typSměny">🕒  Typ směny:</label>
+<select id="typSměny">
+<option value="denni">Denní</option>
+<option value="nocni">Noční</option>
+<option value="odpoledni">Odpolední</option>
+<option value="pul">½ směna</option>
+</select>
+<button type="submit">Spočítat</button>
+</form>
+</section>
+<!-- OUTPUT PAGE -->
+<section class="hidden" id="output-section">
+<h2><i class="material-icons" style="vertical-align: middle;">description</i> Výpočet</h2>
+<div class="output-box" id="outputBox"></div>
+<div class="button-row">
+<button onclick="newShift()">Nová směna</button>
+<button onclick="downloadPDF()">Export PDF</button>
+<button onclick="shareResult()">Sdílet</button>
+</div>
+</section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
